@@ -16,7 +16,7 @@ class EventsController < ApplicationController
   # POST /events
   def create
     @event = Event.new(event_params)
-
+    byebug
     if @event.save
       render json: @event, status: :created, location: @event
     else
